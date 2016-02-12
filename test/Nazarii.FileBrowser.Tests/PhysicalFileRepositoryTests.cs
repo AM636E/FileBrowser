@@ -9,7 +9,7 @@ namespace Nazarii.FileBrowser.Tests
         [Fact]
         public void PassingTest()
         {
-            var repository = new PhysicalFileRepository();
+            var repository = new PhysicalFileRepository(2, 5, 10);
             var result = repository.GetFolderStatistics("./TestFolder");
             Assert.Equal(8, result.SmallFiles);
         }
