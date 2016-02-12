@@ -47,13 +47,17 @@ namespace Nazarii.FileBrowser.Repositories
             };
         }
 
-        private static string ParsePath(string path)
+        public static string ParsePath(string path)
         {
             if (path.IndexOf("/root/", StringComparison.Ordinal) != 0) return path;
             // Skipping /root/
             var builder = new StringBuilder(path.Substring(6));
             builder.Insert(1, ':');
-            builder.Append(@"\");
+            if (path.Last() != '/' || path.Last() != '\\')
+            {
+                builder.Append(@"\");
+            }
+            builder.Replace('/', '\\');
             return builder.ToString();
         }
     }
