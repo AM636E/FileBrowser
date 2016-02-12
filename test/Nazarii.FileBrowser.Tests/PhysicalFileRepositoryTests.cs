@@ -32,5 +32,26 @@ namespace Nazarii.FileBrowser.Tests
             var result = repository.GetDirectoryInfo("./TestFolder/Test");
             Assert.Equal(8, result.Children.Count());
         }
+
+        [Fact]
+        public void ParsePathTest()
+        {
+            var path = PhysicalFileRepository.ParsePath("/root/g/info");
+            Assert.Equal(@"G:\info\".ToLower(), path.ToLower());
+        }
+
+        [Fact]
+        public void ParsePathTestEmpty()
+        {
+            var path = PhysicalFileRepository.ParsePath(string.Empty);
+            Assert.Equal(string.Empty, path);
+        }
+
+        [Fact]
+        public void ParsePathTestNotRooted()
+        {
+            var path = PhysicalFileRepository.ParsePath(@"g:\info\test");
+            Assert.Equal(@"g:\info\test", path.ToLower());
+        }
     }
 }
