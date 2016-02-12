@@ -17,9 +17,9 @@ namespace Nazarii.FileBrowser.Repositories
                .ToList();
             return new FolderStatistics
             {
-                BigFiles = dirs.Count(it => it < 10),
+                SmallFiles = dirs.Count(it => it < 10),
                 MiddleFiles = dirs.Count(it => it >= 10 && it <= 50),
-                SmallFiles = dirs.Count(it => it > 100)
+                BigFiles = dirs.Count(it => it > 100)
             };
         }
 

@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nazarii.FileBrowser", "src\Nazarii.FileBrowser\Nazarii.FileBrowser.xproj", "{7BE8F58C-29AA-4D07-8968-131514FB3BE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{49BF9066-1781-4ABF-B961-9A0A87083D6B}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Nazarii.FileBrowser.Tests", "test\Nazarii.FileBrowser.Tests\Nazarii.FileBrowser.Tests.xproj", "{4680E680-243D-45EF-A71D-797FAB904D1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,16 +26,16 @@ Global
 		{7BE8F58C-29AA-4D07-8968-131514FB3BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE8F58C-29AA-4D07-8968-131514FB3BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE8F58C-29AA-4D07-8968-131514FB3BE9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4680E680-243D-45EF-A71D-797FAB904D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4680E680-243D-45EF-A71D-797FAB904D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4680E680-243D-45EF-A71D-797FAB904D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4680E680-243D-45EF-A71D-797FAB904D1B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7BE8F58C-29AA-4D07-8968-131514FB3BE9} = {68E379F5-08CC-4CE4-AE3D-4B35279E05DD}
-		{FD4C1106-6F3D-4995-9A9E-8ECB2C39359A} = {68E379F5-08CC-4CE4-AE3D-4B35279E05DD}
+		{4680E680-243D-45EF-A71D-797FAB904D1B} = {49BF9066-1781-4ABF-B961-9A0A87083D6B}
 	EndGlobalSection
 EndGlobal
