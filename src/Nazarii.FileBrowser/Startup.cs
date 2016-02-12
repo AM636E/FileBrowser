@@ -22,7 +22,8 @@ namespace Nazarii.FileBrowser
             {
                 opts.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             });
-            services.AddTransient(typeof (IFileRepository), typeof (PhysicalFileRepository));
+            
+            services.AddInstance<IFileRepository>(new PhysicalFileRepository(10, 50, 100));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

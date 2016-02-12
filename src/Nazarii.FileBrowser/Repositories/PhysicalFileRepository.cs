@@ -9,6 +9,17 @@ namespace Nazarii.FileBrowser.Repositories
 {
     public class PhysicalFileRepository : IFileRepository
     {
+        private readonly int _smallSize;
+        private readonly int _middleSize;
+        private readonly long _bigSize;
+
+        public PhysicalFileRepository(int smallSize, int middleSize, long bigSize)
+        {
+            _smallSize = smallSize;
+            _middleSize = middleSize;
+            _bigSize = bigSize;
+        }
+
         public FolderStatistics GetFolderStatistics(string path)
         {
             var dirs = System.IO.Directory.GetFiles(ParsePath(path), "*.*", SearchOption.AllDirectories)
@@ -17,9 +28,9 @@ namespace Nazarii.FileBrowser.Repositories
                .ToList();
             return new FolderStatistics
             {
-                SmallFiles = dirs.Count(it => it < 10),
-                MiddleFiles = dirs.Count(it => it >= 10 && it <= 50),
-                BigFiles = dirs.Count(it => it > 100)
+                SmallFiles = dirs.Count(it => it < _smallSize),
+                MiddleFiles = dirs.Count(it => it >= _smallSize && it <= _middleSize),
+                BigFiles = dirs.Count(it => it > _bigSize)
             };
         }
 
