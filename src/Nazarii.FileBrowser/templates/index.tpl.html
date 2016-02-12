@@ -1,0 +1,40 @@
+﻿<div class="file-browser">
+    <div class="file-browser-item error" ng-show="error">
+        <span class="error-text">
+           Some error occured: {{error.statusText}}
+        </span>
+    </div>
+    <div class="file-browser-item directory-info">
+        <table>
+            <thead>
+                <tr>
+                    <th>Less 10Mb</th>
+                    <th>10Mb-50Mb</th>
+                    <th>More 100Mb</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{directoryInfo.smallFiles}}</td>
+                    <td>{{directoryInfo.middleFiles}}</td>
+                    <td>{{directoryInfo.bigFiles}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="file-browser-item directory-content">
+        <div class="path">
+            <span class="path-title">Current Path:</span> <span>{{readablePath}}</span>
+        </div>
+        <div class="directory-items">
+            <ul>
+                <li>
+                    <a href="" ng-click="moveUp()">../</a>
+                </li>
+                <li ng-repeat="d in directory.children">
+                    <a ng-href="#{{directory.fullPath}}/{{d.name}}">{{d.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
