@@ -24,7 +24,7 @@ namespace Nazarii.FileBrowser.Repositories
         {
             var dirs = System.IO.Directory.GetFiles(ParsePath(path), "*.*", SearchOption.AllDirectories)
                .Where(it => it.Length < 260) // Exclude longs paths because is makes an error.
-               .Select(it => new FileInfo(it).Length / 1000000) // Convert bytes to mb.
+               .Select(it => new FileInfo(it).Length / 1000000.0) // Convert bytes to mb.
                .ToList();
             return new FolderStatistics
             {
