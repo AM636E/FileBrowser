@@ -11,7 +11,9 @@ namespace Nazarii.FileBrowser.Tests
         {
             var repository = new PhysicalFileRepository(2, 5, 10);
             var result = repository.GetFolderStatistics("./TestFolder");
-            Assert.Equal(8, result.SmallFiles);
+            Assert.Equal(9, result.SmallFiles);
+            Assert.Equal(4, result.BigFiles);
+            Assert.Equal(6, result.MiddleFiles);
         }
     }
 }
