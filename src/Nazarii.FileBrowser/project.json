@@ -9,8 +9,7 @@
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-rc1-*",
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-*",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-*",
-    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-*",
-    "System.Linq" : "4.0.1"
+    "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-*"
   },
 
   "commands": {
