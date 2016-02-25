@@ -5,4 +5,4 @@ mono:
 install: 
 install: curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | sh && source ~/.dnx/dnvm/dnvm.sh && dnvm upgrade
 script:
-  cd test/Nazarii.FileBrowser.Tests && dnu restore && dnx test
+  cd test/Nazarii.FileBrowser.Tests && dnu restore && dnu build
