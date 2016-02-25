@@ -10,7 +10,7 @@
     "Microsoft.AspNet.Mvc": "6.0.0-rc1-*",
     "Microsoft.AspNet.StaticFiles": "1.0.0-rc1-*",
     "Microsoft.AspNet.Diagnostics": "1.0.0-rc1-*",
-    "System.Linq" : "4.0.1-rc2-*"
+    "System.Linq" : "4.0.1"
   },
 
   "commands": {
